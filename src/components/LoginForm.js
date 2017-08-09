@@ -26,19 +26,17 @@ class LoginForm extends Component {
       });
   }
 
-  onLoginSuccess()
-  {
-     this.setState({ 
-       email:'',
-       password:'',
-       loading: false,
-       error:''  
-      });
+  onLoginSuccess() {
+    this.setState({
+      email: '',
+      password: '',
+      loading: false,
+      error: ''
+    });
   }
 
-  onLoginFail()
-  {
-      this.setState({ loading: false, error: 'Authentication Failed.' });
+  onLoginFail() {
+    this.setState({ loading: false, error: 'Authentication Failed.' });
   }
 
   renderButton() {
@@ -48,7 +46,7 @@ class LoginForm extends Component {
     return (
       <Button onPress={this.login.bind(this)}>
         Log In
-        </Button>
+      </Button>
     );
   }
 
